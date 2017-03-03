@@ -1,0 +1,184 @@
+.header {
+  background: url("../img/flyme/header_bg.png") no-repeat 0 0;
+  width: 1903px;
+  height: 790px;
+  z-index: 2;
+}
+.header .header_content {
+  width: 1240px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.header .header_content > a {
+  float: left;
+  margin: 20px 10px;
+}
+.header .header_content ul {
+  float: left;
+  margin-left: 500px;
+}
+.header .header_content ul > li {
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  margin: 15px 10px 15px 15px;
+}
+.header .header_content ul > li > a {
+  color: #666;
+  font-size: 16px;
+}
+.header .header_content ul > li a:hover {
+  color: #00c3f5;
+  transition: color 0.5s linear;
+}
+.main {
+  width: 1903px;
+  height: 375px;
+}
+.main > ul {
+  width: 1240px;
+  height: 295px;
+  margin: 40px auto;
+}
+.main > ul > li {
+  float: left;
+}
+.main > ul > li > a {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 295px;
+  margin-right: 20px;
+  display: block;
+}
+.main > ul a.firstbg {
+  background-image: url("../img/flyme/fly_main1.png");
+}
+.main > ul a.secondbg {
+  background-image: url("../img/flyme/fly_main2.png");
+}
+.main > ul a.threebg {
+  background-image: url("../img/flyme/fly_main3.png");
+  margin-right: 0px;
+}
+.footer {
+  width: 1903px;
+  height: 133px;
+  border-top: 1px solid #cccccc;
+  margin: 0px auto;
+}
+.footer .footer_top {
+  width: 1240px;
+  height: 78px;
+  margin: 0px auto;
+}
+.footer .footer_top ul > li {
+  float: left;
+}
+.footer .footer_top ul > li a {
+  height: 20px;
+  line-height: 20px;
+  margin: 29px 15px;
+  display: block;
+  color: #666;
+}
+.footer .footer_top ul > li a:hover {
+  color: #00c3f5;
+  transition: color 0.5s linear;
+}
+.footer .footer_top ul > li a.ul_line:hover,
+.footer .footer_top ul > li a.ul_Chinese:hover,
+.footer .footer_top ul > li a.ul_Hotline:hover {
+  color: #666;
+}
+.footer .footer_top ul > li a.ul_Chinese b {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: url("../img/flyme/lang-choice.png") no-repeat 0 0;
+}
+.footer .footer_top ul > li a.ul_Hotline {
+  margin-left: 80px;
+}
+.footer .footer_top ul > li a.online_phone {
+  font-size: 14px;
+  background-color: #00a7ea;
+  color: #fff;
+  border-radius: 2px;
+}
+.footer .footer_top div.weixin {
+  float: left;
+  margin: 29px 15px 29px 140px;
+  position: relative;
+}
+.footer .footer_top div.weixin i {
+  float: left;
+  width: 21px;
+  height: 18px;
+  background: url("../img/indexIcon/weixin1.png") no-repeat 0 0;
+}
+.footer .footer_top div.weixin p {
+  height: 20px;
+  line-height: 20px;
+  margin-left: 10px;
+  float: left;
+}
+.footer .footer_top div.weixin div.weixin_erweima {
+  width: 183px;
+  height: 221px;
+  position: absolute;
+  left: 0;
+  top: -221px;
+  background-image: url("../img/indexIcon/weixin2.png");
+  display: none;
+}
+.footer .footer_top div.weibo {
+  float: left;
+  margin: 29px 15px 29px 20px;
+}
+.footer .footer_top div.weibo i {
+  float: left;
+  width: 21px;
+  height: 18px;
+  background: url("../img/indexIcon/weibo.png") no-repeat 0 0;
+}
+.footer .footer_top div.weibo a {
+  height: 20px;
+  line-height: 20px;
+  margin-left: 10px;
+  float: left;
+  color: #666;
+}
+.footer .footer_top .weixin:hover {
+  cursor: pointer;
+}
+.footer .footer_top .weixin:hover i {
+  background-image: url("../img/indexIcon/weixin1hover.png");
+}
+.footer .footer_top .weixin:hover p {
+  color: #62b900;
+}
+.footer .footer_top .weixin:hover .weixin_erweima {
+  display: block;
+}
+.footer .footer_top .weibo:hover {
+  cursor: pointer;
+}
+.footer .footer_top .weibo:hover i {
+  background-image: url("../img/indexIcon/weibohover.png");
+}
+.footer .footer_top .weibo:hover a {
+  color: #e02b41;
+}
+.footer .footer_bottom {
+  width: 1240px;
+  height: 40px;
+  margin: 0 auto;
+}
+.footer .footer_bottom p {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #626262;
+}

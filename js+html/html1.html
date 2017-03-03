@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>分页练习</title>
+  <script type="text/javascript">
+    var totalpage,pagesize,cpage,count,curcount,out;
+    //初始化
+    cpage = 1;
+    pagesize = 5; //每页的数量
+    totalpage =19; //页数
+    out = "";
+    //分页
+    function goto(target)
+    {
+      cpage = target;        //把页面计数定位到第几页
+      sett();
+
+    }
+    function sett()
+    {
+      if(totalpage<=5){        //总页数小于五页 ,循环页数
+        for (count=1;count<=totalpage;count++)
+        {    if(count!=cpage)
+        {
+          out = out + "<a href='javascript:void(0)' onclick='goto("+count+")'>"+count+"</a>";
+        }else{
+          out = out + "<span class='current' >"+count+"</span>";
+        }
+        }
+      }
+      if(totalpage>5){        //总页数大于五页
+        if(parseInt((cpage-1)/5) == 0)
+        {
+          for (count=1;count<=5;count++)
+          {    if(count!=cpage)
+          {
+            out = out + "<a href='javascript:void(0)' onclick='goto("+count+")'>"+count+"</a>";
+          }else{
+            out = out + "<span class='current'>"+count+"</span>";
+          }
+          }
+          out = out + "<a href='javascript:void(0)' onclick='goto("+count+")'> 下一页 </a>";
+        }
+        else if(parseInt((cpage-1)/5) == parseInt(totalpage/5))
+        {
+          out = out + "<a href='javascript:void(0)' onclick='goto("+(parseInt((cpage-1)/5)*5)+")'>上一页</a>";
+          for (count=parseInt(totalpage/5)*5+1;count<=totalpage;count++)
+          {    if(count!=cpage)
+          {
+            out = out + "<a href='javascript:void(0)' onclick='goto("+count+")'>"+count+"</a>";
+          }else{
+            out = out + "<span class='current'>"+count+"</span>";
+          }
+          }
+        }
+        else
+        {
+          out = out + "<a href='javascript:void(0)' onclick='goto("+(parseInt((cpage-1)/5)*5)+")'>上一页</a>";
+          for (count=parseInt((cpage-1)/5)*5+1;count<=parseInt((cpage-1)/5)*5+5;count++)
+          {
+            if(count!=cpage)
+            {
+              out = out + "<a href='javascript:void(0)' onclick='goto("+count+")'>"+count+"</a>";
+            }else{
+              out = out + "<span class='current'>"+count+"</span>";
+            }
+          }
+          out = out + "<a href='javascript:void(0)' onclick='goto("+count+")'>下一页</a>";
+        }
+      }
+      document.getElementById("waChe").innerHTML = "<div id='waChe'><span id='info'>共"+totalpage+"页|第"+cpage+"页<\/span>" + out + "<\/div>";
+      out = "";
+    }
+
+
+    window.onload=function(){
+      sett();    //调用分页
+
+    }
+  </script>
+  <style type="text/css">
+    #waChe a,
+    #waChe a:visited,
+    #waChe a:hover,
+    #waChe .current,
+    #waChe #info{
+      border: 1px solid #DDD;
+      background: #fff;
+      display: inline-block;
+      margin: 1px;
+      text-decoration: none;
+      font-size: 12px;
+      text-align: center;
+      color: #666;
+      padding: 8px 14px;
+    }
+
+    #waChe .current{
+      border:1px solid #83E7E4;
+      background:#0F90D2;
+      margin:1px;
+      color:#fff;
+    }
+    #waChe #info{
+      width:auto;
+    }
+  </style>
+</head>
+<body>
+<div class="totalRec">
+  <div class="pages">
+    <div id="waChe"></div>
+  </div>
+</div>
+</body>
+</html>

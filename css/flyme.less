@@ -1,0 +1,154 @@
+//*************开始*********
+//header部分
+.header{
+  background:url("../img/flyme/header_bg.png") no-repeat 0 0;
+  width:1903px;height:790px;z-index:2;
+  .header_content {
+    width:1240px;height:90px;margin:0px auto;
+    background-color:rgba(255,255,255,0.5);
+    >a {
+      float: left;
+      margin: 20px 10px;
+    }
+    ul{float:left;
+      margin-left:500px;
+    >li{
+      float:left;
+      height:60px;
+      line-height: 60px;
+      margin:15px 10px 15px 15px;
+      >a{
+        color:#666;
+        font-size:16px;
+      }
+      a:hover{color:#00c3f5;transition: color 0.5s linear;}
+    }
+    }
+  }
+}
+
+//页面主体部分
+.main{width:1903px;height:375px;
+  >ul{width:1240px; height:295px;margin:40px auto;
+  >li{float:left;
+    >a{background-position:0 0;background-repeat: no-repeat;width:400px;height:295px;margin-right:20px;display: block;}
+  }
+    a.firstbg{background-image: url("../img/flyme/fly_main1.png");}
+    a.secondbg{background-image: url("../img/flyme/fly_main2.png");}
+    a.threebg{background-image: url("../img/flyme/fly_main3.png");margin-right: 0px;}
+  }
+}
+
+//页面footer部分
+.footer {
+  width: 1903px;
+  height: 133px;
+  border-top: 1px solid #cccccc;
+  margin: 0px auto;
+  .footer_top {
+    width: 1240px;
+    height: 78px;
+    margin: 0px auto;
+    ul > li {
+      float: left;
+      a {
+        height: 20px;
+        line-height: 20px;
+        margin: 29px 15px;
+        display: block;
+        color: #666;
+      }
+      a:hover {
+        color: #00c3f5;
+        transition: color 0.5s linear;
+      }
+      a.ul_line:hover, a.ul_Chinese:hover, a.ul_Hotline:hover {
+        color: #666;
+      }
+      a.ul_Chinese {
+        b {
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          background: url("../img/flyme/lang-choice.png") no-repeat 0 0;
+        }
+      }
+      a.ul_Hotline {
+        margin-left: 80px;
+      }
+      a.online_phone {
+        font-size: 14px;
+        background-color: #00a7ea;
+        color: #fff;
+        border-radius: 2px;
+      }
+    }
+    div.weixin {
+      float: left;
+      margin: 29px 15px 29px 140px;
+      position: relative;
+      i {
+        float: left;
+        width: 21px;
+        height: 18px;
+        background: url("../img/indexIcon/weixin1.png") no-repeat 0 0;
+      }
+      p {
+        height: 20px;
+        line-height: 20px;
+        margin-left: 10px;
+        float: left
+      }
+      div.weixin_erweima {
+        width: 183px;
+        height: 221px;
+        position: absolute;
+        left: 0;
+        top: -221px;
+        background-image: url("../img/indexIcon/weixin2.png");
+        display: none;
+      }
+    }
+    div.weibo {
+      float: left;
+      margin: 29px 15px 29px 20px;
+      i {
+        float: left;
+        width: 21px;
+        height: 18px;
+        background: url("../img/indexIcon/weibo.png") no-repeat 0 0;
+      }
+      a {
+        height: 20px;
+        line-height: 20px;
+        margin-left: 10px;
+        float: left;
+        color:#666;
+      }
+    }
+    .weixin:hover {
+      i {
+        background-image: url("../img/indexIcon/weixin1hover.png");
+      }
+      cursor: pointer;
+      p {
+        color: #62b900;
+      }
+      .weixin_erweima {
+        display: block;
+      }
+    }
+
+    .weibo:hover {
+      i {
+        background-image: url("../img/indexIcon/weibohover.png");
+      }
+      cursor:pointer;
+      a{color:#e02b41;}
+
+    }
+  }
+  .footer_bottom{width:1240px;height:40px;margin:0 auto;
+    p{height:40px;line-height: 40px;text-align:center;color:rgb(98,98,98,0.6);}
+  }
+}

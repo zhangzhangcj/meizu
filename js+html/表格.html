@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="../js/jquery-1.11.3.js"/>
+</head>
+<body>
+<a href="http://www.baidu.com" target="_blank" id="bd">百度</a>
+<script>
+$(document).ready(function () {
+$("#bd").(function () {
+var textValue = $(this).html();
+
+if (textValue == "XX概况" || textValue == "服务导航") {
+
+$(this).css("cursor", "default");
+
+$(this).attr('href', '#');     //修改<a>的 href属性值为 #  这样状态栏不会显示链接地址
+
+  $(this).click(function (event) {
+
+  event.preventDefault();   // 如果<a>定义了 target="_blank“ 需要这句来阻止打开新页面
+
+    });
+    }
+    });
+    });
+</script>
+
+
+</body>
+</html>
